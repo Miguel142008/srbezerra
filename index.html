@@ -19,19 +19,18 @@
         <h1>Veja nossas opções</h1>
         <h4 class="text-secondary">Ou se preferir, contate-nos!</h4>
         <div class="button-container">
-            <a href="#" class="button" onclick="abrirImagens()">Cardápio</a>
+            <a href="#" class="button" id="btnCardapio">Cardápio</a>
             <a href="https://wa.me/+55018996863988" class="button" target="_blank">WhatsApp</a>
             <a href="https://www.instagram.com/sr.bezerrahamburgueria/" class="button" target="_blank">Instagram</a>
         </div>
     </div>
     
     <script>
-        function abrirImagens() {
+        document.getElementById("btnCardapio").addEventListener("click", function(event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
             window.open('./assets/cardapio parte 1.png', '_blank');
-            setTimeout(() => {
-                window.open('./assets/cardapio parte 2.png', '_blank');
-            }, 300); // Pequeno atraso para evitar bloqueio do navegador
-        }
+            window.open('./assets/cardapio parte 2.png', '_blank');
+        });
     </script>
     
     <script src="./scripts/main.js"></script>
